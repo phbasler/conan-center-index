@@ -18,7 +18,7 @@ jobs:
 
             - name: Show installed packages 
               run: |
-                sudo apt list --installed | grep -e llvm --clang
+                sudo apt list --installed | grep -e llvm -e clang
 
             #- name: Install LLVM and Clang
             #  uses: KyleMayes/install-llvm-action@v2
