@@ -8,7 +8,7 @@ jobs:
         steps:
             - uses: actions/checkout@v4
 
-            - run: sudo apt install -y gcc-12 clang-13 libc++abi-12-dev libc++-12-dev
+            - run: sudo apt install -y gcc-12 clang-13 libc++abi-12-dev libc++-12-dev cmake make
 
             - run: pip3 install "conan<2"
             - run: conan profile new dummy
