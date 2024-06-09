@@ -16,6 +16,10 @@ jobs:
               uses: KyleMayes/install-llvm-action@v2
               with:
                 version: "13.0"
+            - name: Symlink libclang.so (Linux)
+              if: contains(matrix.os, 'ubuntu')
+              run: sudo ln -s libclang-11.so.1 /lib/x86_64-linux-gnu/libclang.so
+              working-directory: ${{ env.LLVM_PATH }}/lib
 
             - run: pip3 install "conan<2"
             - run: conan profile new dummy
