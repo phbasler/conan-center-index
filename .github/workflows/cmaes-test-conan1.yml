@@ -6,9 +6,10 @@ jobs:
     conan1:
         runs-on: ubuntu-latest
         steps:
-            - run: pip3 install "conan<2"
             - uses: actions/checkout@v4
-            - run: conan profile new
+
+            - run: pip3 install "conan<2"
+            - run: conan profile new dummy
             - run: |
                 cd recipes/cmaes/all
                 cp profiles/clang-libc++-release ~/.conan/profiles
