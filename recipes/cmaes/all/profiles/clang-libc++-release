@@ -9,5 +9,3 @@ os=Linux
 cmaes:shared=False
 [build_requires]
 [env]
-CC=clang-13
-CXX=clang++-13
